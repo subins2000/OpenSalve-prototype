@@ -1,6 +1,6 @@
 
 <div id='map'></div>
-<h2 id="logo">OpenSalve</h2>
+<img src="<?=asset_url();?>imgs/logo.png" id="logo">
 <div id="reg">
     <?php if(!checklogin()): ?>
     <ul>

@@ -15,6 +15,7 @@
         #logo {
           position: relative;
           display: inline-block;
+          width:250px;
           top :10px;
           left :10px;
         }
