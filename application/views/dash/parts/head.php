@@ -56,11 +56,9 @@
                         <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
 
                         <!-- Messages -->
-    
+
                         <!-- End Messages -->
                     </ul>
-
- 
                 </div>
             </nav>
         </div>
@@ -74,15 +72,15 @@
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
                         <li>
-                            <a href="<?=base_url();?>admin/index">
+                            <a href="<?=base_url();?>user">
                                 <i class="fa fa-tachometer"></i><span class="hide-menu"> Home</span>
                             </a>
                         </li>
                         <!-- <li><a href="index.html"><i class="fa fa-tachometer"></i> Ecommerce </a></li> -->
-                      <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-paint-brush"></i><span class="hide-menu">Quizzes <span class="label label-rouded label-primary pull-right">2</span></span></a>
+                      <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-paint-brush"></i><span class="hide-menu">Camps <span class="label label-rouded label-primary pull-right">2</span></span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="<?=base_url();?>admin/create"><i class="fa fa-plus"></i> Create </a></li>
-                                <li><a href="<?=base_url();?>admin/manage"><i class="fa fa-list"></i> Manage </a></li>
+                                <li><a href="<?=base_url();?>user/add_camp"><i class="fa fa-plus"></i> Create </a></li>
+                                <li><a href="<?=base_url();?>user/manage_camp"><i class="fa fa-list"></i> Manage </a></li>
                             </ul>
                         </li>
                         <li>
