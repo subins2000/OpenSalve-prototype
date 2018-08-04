@@ -63,3 +63,6 @@ $route['logout'] = 'register/logoutcontroller';
 $route['user'] = 'user/home';
 $route['user/add_camp'] = 'user/add_camp';
 $route['user/manage_camp'] = 'user/manage_camp';
+
+$route['supplies'] = 'supply/home';
+$route['supplies/add'] = 'supply/add_supply';
