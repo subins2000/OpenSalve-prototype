@@ -1,3 +1,15 @@
+.bg-black {
+    background: #000;
+}
+.container {
+    padding: 0 0 100px;
+}
+#brand-title {
+    padding: 20px 0 50px;
+}
+.stat {
+    text-align: center;
+}
 .form-signin {
   width: 100%;
   max-width: 330px;
