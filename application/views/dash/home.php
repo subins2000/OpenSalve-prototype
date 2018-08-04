@@ -1,0 +1,1 @@
+<h2>Welcome home <?=getuser()['name'];?></h2>

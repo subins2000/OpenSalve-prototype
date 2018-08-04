@@ -55,3 +55,9 @@ $route['translate_uri_dashes'] = FALSE;
 //Custom Routers
 $route['register'] = 'register';
 $route['signin'] = 'register/login';
+$route['logout'] = 'register/logoutcontroller';
+
+
+//dashboards
+$route['user'] = 'user/home';
+

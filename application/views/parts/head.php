@@ -26,6 +26,7 @@
         <a class="nav-link" href="#">About</a>
       </li>
     </ul>
+    <?php if(!checklogin()): ?>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link" href="<?=base_url(); ?>signin">Login</a>
@@ -33,6 +34,11 @@
       <li class="nav-item">
         <a href="<?=base_url(); ?>register" class="btn btn-info my-2 my-sm-0" >Signup</a>
       </li>
+       <?php else: ?>
+       <li class="nav-item">
+        <a href="<?=base_url(); ?>logout" class="btn btn-info my-2 my-sm-0" >Logout</a>
+      </li>
+      <?php endif; ?>
     </ul>
 <!--     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search">
@@ -40,3 +46,6 @@
     </form> -->
   </div>
 </nav>
+<br>
+<br>
+<br>
