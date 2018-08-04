@@ -1,15 +1,37 @@
-<div class="container">
+<div class="">
 	<center id="brand-title">
 		<h1 style="margin-top: 0;">OpenSalve</h1>
-		<p>Helping relief efforts</p>
+		<p>Relief made possible</p>
 	</center>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuWSldX-non0YF-dn35hbE4BcIQoqwDDk&libraries=visualization">
-	</script>
 	<div id="map" style="height: 600px;width: 100%;"></div>
+</div>
+<div class="bg-black">
+	<div class="container" id="stat-container">
+		<div class="card-columns">
+			<div class="card stat" style="width: 18rem;">
+		  		<div class="card-body">
+					<h2>85</h2>
+					<span>Camps</span>
+				</div>
+			</div>
+			<div class="card stat" style="width: 18rem;">
+		  		<div class="card-body">
+					<h2>₹53.4L</h2>
+					<span>Relief fund dispersed</span>
+				</div>
+			</div>
+			<div class="card stat" style="width: 18rem;">
+		  		<div class="card-body">
+					<h2>243</h2>
+					<span>Volunteers</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuWSldX-non0YF-dn35hbE4BcIQoqwDDk&libraries=visualization">
+	</script>
 	<script>
-		function getRandomInt(min, max) {
-			return Math.floor(Math.random() * (max - min + 1)) + min;
-		}
 
 		/* Data points defined as an array of LatLng objects */
 		var heatmapData = [
@@ -37,28 +59,3 @@
 
 		heatmap.setMap(map);
 	</script>
-</div>
-<div class="bg-black">
-	<div class="container" id="stat-container">
-		<div class="card-columns">
-			<div class="card stat" style="width: 18rem;">
-		  		<div class="card-body">
-					<h2>85</h2>
-					<span>Camps</span>
-				</div>
-			</div>
-			<div class="card stat" style="width: 18rem;">
-		  		<div class="card-body">
-					<h2>₹53.4L</h2>
-					<span>Relief fund dispersed</span>
-				</div>
-			</div>
-			<div class="card stat" style="width: 18rem;">
-		  		<div class="card-body">
-					<h2>243</h2>
-					<span>Volunteers</span>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>

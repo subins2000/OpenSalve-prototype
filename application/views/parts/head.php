@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+    <title>OpenSalve</title>
 		<link rel="stylesheet" href="<?=asset_url(); ?>css/main.css" />
 		<link rel="stylesheet" href="<?=asset_url(); ?>css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
