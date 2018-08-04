@@ -25,7 +25,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('parts/head');
+		$this->load->view('parts/mainhead');
 		$this->load->view('newindex');
 		$this->load->view('parts/foot');
 	}
@@ -45,7 +45,8 @@ class Welcome extends CI_Controller {
 	        "mag": 3.1,
 	        "time": 1507425650893,
 	        "felt": null,
-	        "tsunami": 0
+	        "description": "<strong>Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+             "icon": "theatre"
 	      },
 	      "geometry": {
 	        "type": "Point",
