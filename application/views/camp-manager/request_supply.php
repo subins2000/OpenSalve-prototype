@@ -1,7 +1,20 @@
 <div class="card-title">
-    <h3>Supply Management</h3>
+    <h3>Deliver Item</h3>
     <h5></h5>
+    <div class="text-center">
+        <?php
+        if($msg != "") {
+            ?>
+            <div class="alert alert-dismissible alert-info">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <h3><?=$msg; ?></h3>
+        <?php
+        }
+        ?>
+    </div>
 </div>
+
+<?php echo form_open('camp-manager/request'); ?>
 
 <div class="form-group has-default has-feedback">
     <div class="row">
@@ -47,3 +60,31 @@
         </div>
     </div>
 </div>
+
+<div class="form-group has-default has-feedback">
+    <div class="row">
+        <label class="col-lg-2 col-sm-3 control-label">Item</label>
+        <div class="col-lg-10 col-sm-9">
+            <input type="text" name="item" class="form-control input-default ">
+        </div>
+    </div>
+</div>
+
+<div class="form-group has-default has-feedback">
+    <div class="row">
+        <label class="col-lg-2 col-sm-3 control-label">Required Quantity</label>
+        <div class="col-lg-10 col-sm-9">
+            <input type="text" name="quantity" class="form-control input-default ">
+        </div>
+    </div>
+</div>
+
+<div class="form-group has-default has-feedback">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <input type="submit" class="btn btn-success btn-outline btn-block m-b-10" value="Request Supply">
+        </div>
+    </div>
+</div>
+<?php echo form_close(); ?>

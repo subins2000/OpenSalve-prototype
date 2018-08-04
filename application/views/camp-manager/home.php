@@ -1,7 +1,3 @@
-<div class="card-title">
-    <h3>Admin Panel</h3>
-    <h5></h5>
-</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 <canvas id="myChart" width="400" height="100"></canvas>
 <script>

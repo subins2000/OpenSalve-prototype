@@ -14,7 +14,12 @@ class Supplies extends CI_Model {
         $this->item = $item;
         $this->quantity = $quantity;
         $this->db->insert('supplies', $this);
-      }
+     }
+
+     function update_supply($item, $required_quantity) {
+         $this->db->where('item', $item);
+         $this->db->update('supplies', array('required_quantity' => $required_quantity));
+     }
 
       function get_all()  {
         $this->db->select('*');
