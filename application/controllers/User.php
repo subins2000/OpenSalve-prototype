@@ -9,8 +9,9 @@ class User extends CI_Controller {
       }
 
     public function home() {
-    	$this->load->view('parts/head');
+    	$this->load->view('dash/parts/head');
     	$this->load->view("dash/home");
+    	$this->load->view('dash/parts/foot');
     }
 
   }
