@@ -1,13 +1,22 @@
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-    </style>
-
-
 
 <div id='map'></div>
+<h2 id="logo">OpenSalve</h2>
+<div id="reg">
+    <?php if(!checklogin()): ?>
+    <ul>
+      <li>
+        <a class="btn btn-outline-secondary my-2 my-sm-0" href="<?=base_url(); ?>signin">Login</a>
+      </li>
+      <li>
+        <a href="<?=base_url(); ?>register" class="btn btn-secondary my-2 my-sm-0" >Signup</a>
+      </li>
+       <?php else: ?>
+       <li>
+        <a href="<?=base_url(); ?>logout" class="btn btn-secondary my-2 my-sm-0" >Logout</a>
+      </li>
+      <?php endif; ?>
+    </ul>
+</div>
 
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiZ2Vvbmdlb3JnZWsiLCJhIjoiY2prZm5yaWZ5MDluODNrczdrMHRhZHB5eCJ9.xdRyfEKi2zGVLEUHIiVgFA';
