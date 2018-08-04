@@ -7,6 +7,9 @@
 #brand-title {
     padding: 20px 0 50px;
 }
+#stat-container {
+    padding: 20% 0;
+}
 .stat {
     text-align: center;
 }
