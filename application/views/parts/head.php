@@ -16,19 +16,27 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+     <!--  <li class="nav-item">
         <a class="nav-link" href="#">Features</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Pricing</a>
-      </li>
+      </li> -->
       <li class="nav-item">
         <a class="nav-link" href="#">About</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="<?=base_url(); ?>signin">Login</a>
+      </li> 
+      <li class="nav-item">
+        <a href="<?=base_url(); ?>register" class="btn btn-info my-2 my-sm-0" >Signup</a>
+      </li>
+    </ul>
+<!--     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search">
       <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    </form> -->
   </div>
 </nav>
