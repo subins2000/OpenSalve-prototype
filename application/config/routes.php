@@ -53,6 +53,7 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 //Custom Routers
+$route['getjson'] = 'welcome/getjson';
 $route['register'] = 'register';
 $route['signin'] = 'register/login';
 $route['logout'] = 'register/logoutcontroller';
