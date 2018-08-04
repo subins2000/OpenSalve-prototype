@@ -2,8 +2,8 @@
 <div id='map'></div>
 <img src="<?=asset_url();?>imgs/logo.png" id="logo">
 <div id="reg">
-    <?php if(!checklogin()): ?>
     <ul>
+    <?php if(!checklogin()): ?>
       <li>
         <a class="btn btn-outline-secondary my-2 my-sm-0" href="<?=base_url(); ?>signin">Login</a>
       </li>
@@ -12,6 +12,7 @@
       </li>
        <?php else: ?>
        <li>
+        <a href="<?=base_url(); ?>user" class="btn btn-secondary my-2 my-sm-0" >Dashboard</a>
         <a href="<?=base_url(); ?>logout" class="btn btn-secondary my-2 my-sm-0" >Logout</a>
       </li>
       <?php endif; ?>
