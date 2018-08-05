@@ -1,7 +1,20 @@
 <div class="card-title">
-    <h3>Supply Management</h3>
+    <h3>Deliver Item</h3>
     <h5></h5>
+    <div class="text-center">
+        <?php
+        if($msg != "") {
+            ?>
+            <div class="alert alert-dismissible alert-info">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <h3><?=$msg; ?></h3>
+        <?php
+        }
+        ?>
+    </div>
 </div>
+
+<?php echo form_open('camp-manager/request'); ?>
 
 <div class="form-group has-default has-feedback">
     <div class="row">
@@ -45,45 +58,33 @@
                 <input type="text" id="campID" name="campID" class="form-control input-default">
             </div>
         </div>
-
-        <div class="card-title">
-            <h3>Admin Panel</h3>
-            <h5></h5>
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
-        <canvas id="myChart" width="400" height="100"></canvas>
-        <script>
-        var ctx = document.getElementById("myChart").getContext('2d');
-        var data = {
-            labels: ["Water Bottles", "Rice", "Eggs"],
-            datasets: [
-                {
-                    label: "Required",
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                    data: [150,100,210]
-                },
-                {
-                    label: "Current",
-                    backgroundColor: 'rgba(255, 206, 86, 0.2)',
-                    data: [50, 47, 87]
-                },
-            ]
-        };
-
-        var myBarChart = new Chart(ctx, {
-            type: 'bar',
-            data: data,
-            options: {
-                barValueSpacing: 40,
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            min: 0,
-                        }
-                    }]
-                }
-            }
-        });
-        </script>
     </div>
 </div>
+
+<div class="form-group has-default has-feedback">
+    <div class="row">
+        <label class="col-lg-2 col-sm-3 control-label">Item</label>
+        <div class="col-lg-10 col-sm-9">
+            <input type="text" name="item" class="form-control input-default ">
+        </div>
+    </div>
+</div>
+
+<div class="form-group has-default has-feedback">
+    <div class="row">
+        <label class="col-lg-2 col-sm-3 control-label">Required Quantity</label>
+        <div class="col-lg-10 col-sm-9">
+            <input type="text" name="quantity" class="form-control input-default ">
+        </div>
+    </div>
+</div>
+
+<div class="form-group has-default has-feedback">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <input type="submit" class="btn btn-success btn-outline btn-block m-b-10" value="Request Supply">
+        </div>
+    </div>
+</div>
+<?php echo form_close(); ?>
