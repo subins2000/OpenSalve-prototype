@@ -83,13 +83,15 @@ class Welcome extends CI_Controller {
     echo']}';
 	}
 
-	public function camps() {
+	public function camps($id = '') {
 		$this->load->model('camps');
 
 		$camps = $this->camps->get_all();
 
+		$data = ['camps' => $camps, 'id' => $id];
+
 		$this->load->view('parts/head');
-		$this->load->view('camps', ['camps' => $camps]);
+		$this->load->view('camps', $data);
 		$this->load->view('parts/foot');
 	}
 }

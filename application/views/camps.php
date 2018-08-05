@@ -4,14 +4,14 @@
 		<p>Relief made possible</p>
 	</center>
 	<div id="map" style="height: 600px;width: 50%;" class="d-inline-block"></div>
-	<div class="d-inline-block" style="vertical-align: top;width: 49%;">
+	<div class="d-inline-block" style="vertical-align: top;width: 49%;text-align: center;">
 		<div class="card">
 			<div class="card-body">
 				<h2 class="card-title" id="campName"></h2>
 			</div>
 		</div><br/>
 		<center>
-			<div class="card-columns">
+			<div class="card-columns" style="margin-left: 25%;">
 				<div class="card stat">
 					<div class="card-body">
 						<h2 id="peopleCount"></h2>
@@ -110,18 +110,30 @@ map = new google.maps.Map(document.getElementById('map'), {
 	zoom: 15,
 });
 
+var markers = [];
+
 for (i = 0; i < locations.length; i++) {
-	marker = new google.maps.Marker({
+	markers[i] = new google.maps.Marker({
 		 position: new google.maps.LatLng(locations[i][1], locations[i][2]),
 		 map: map
 	});
 
-	google.maps.event.addListener(marker, 'click', (function(marker, i) {
+	google.maps.event.addListener(markers[i], 'click', (function(marker, i) {
 		 return function() {
 			 $('#campName').text(locations[i][4]);
 			 $('#peopleCount').text(locations[i][3]);
 			 $('#daysCount').text(Math.round(Math.random() * 100));
 		 }
-	})(marker, i));
+	})(markers[i], i));
 }
+
+setTimeout(function() {
+	<?php
+	if ($id != '') {
+	?>
+	new google.maps.event.trigger( markers[<?php echo $id;?>], 'click' );
+	<?php
+	}
+	?>
+});
 </script>

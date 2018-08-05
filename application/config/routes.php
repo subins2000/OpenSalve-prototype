@@ -59,6 +59,7 @@ $route['signin'] = 'register/login';
 $route['logout'] = 'register/logoutcontroller';
 
 $route['camps'] = 'welcome/camps';
+$route['camps/(:num)'] = 'welcome/camps/$1';
 
 
 //dashboards
