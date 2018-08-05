@@ -52,7 +52,7 @@ class Welcome extends CI_Controller {
 	        "time": 1507425650893,
 	        "felt": null,
 	        "title": "'.$camps[$i]['title'].'",
-	        "description": "<section class=\"mappopbox\"><p>is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p><p>Affected people: '.$camps[$i]['people'].'</p><p><a href=\"/camps/'.$camps[$i]['id'].'\" target=\"_blank\" title=\"Opens in a new window\" class=\"btn btn-info my-2 my-sm-0\">Information</a><p></section>",
+	        "description": "<section class=\"mappopbox\"><p>Affected by Flood</p><p>Affected people: '.$camps[$i]['people'].'</p><p><a href=\"/camps/'.$camps[$i]['id'].'\" target=\"_blank\" title=\"Opens in a new window\" class=\"btn btn-info my-2 my-sm-0\">Information</a><p></section>",
              "icon": "theatre"
 	      },
 	      "geometry": {
@@ -88,7 +88,7 @@ class Welcome extends CI_Controller {
 
 		$camps = $this->camps->get_all();
 
-		$data = ['camps' => $camps, 'id' => $id];
+		$data = ['camps' => $camps, 'id' => $id-1];
 
 		$this->load->view('parts/head');
 		$this->load->view('camps', $data);

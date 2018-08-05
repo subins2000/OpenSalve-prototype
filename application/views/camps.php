@@ -141,7 +141,7 @@ setTimeout(function() {
 	<?php
 	if ($id != '') {
 	?>
-	new google.maps.event.trigger( markers[<?php echo $id + 1;?>], 'click' );
+	new google.maps.event.trigger( markers[<?php echo $id;?>], 'click' );
 	<?php
 	}
 	?>
