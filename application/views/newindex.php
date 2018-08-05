@@ -1,6 +1,6 @@
 
 <div id='map'></div>
-<img src="<?=asset_url();?>imgs/logo.png" id="logo">
+<img src="<?=asset_url();?>imgs/logo-tag.png" id="logo">
 <div id="reg">
     <ul>
     <?php if(!checklogin()): ?>
