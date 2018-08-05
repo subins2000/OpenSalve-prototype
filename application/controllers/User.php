@@ -38,5 +38,11 @@ class User extends CI_Controller {
     	$this->load->view('dash/parts/foot');
     }
 
+	public function requests() {
+		$this->load->view('dash/parts/head');
+    	$this->load->view('dash/requests');
+    	$this->load->view('dash/parts/foot');
+	}
+
 }
 ?>

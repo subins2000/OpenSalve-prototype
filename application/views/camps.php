@@ -7,20 +7,20 @@
 	<div class="d-inline-block" style="vertical-align: top;width: 49%;text-align: center;">
 		<div class="card">
 			<div class="card-body">
-				<h2 class="card-title" id="campName"></h2>
+				<h2 class="card-title" id="campName">Alappuzha Relief Effort</h2>
 			</div>
 		</div><br/>
 		<center>
 			<div class="card-columns" style="margin-left: 25%;">
 				<div class="card stat">
 					<div class="card-body">
-						<h2 id="peopleCount"></h2>
+						<h2 id="peopleCount">980</h2>
 						<span>People</span>
 					</div>
 				</div>
 				<div class="card stat">
 					<div class="card-body">
-						<h2 id="daysCount"></h2>
+						<h2 id="daysCount">34</h2>
 						<span>Days</span>
 					</div>
 				</div>
@@ -141,7 +141,7 @@ setTimeout(function() {
 	<?php
 	if ($id != '') {
 	?>
-	new google.maps.event.trigger( markers[<?php echo $id;?>], 'click' );
+	new google.maps.event.trigger( markers[<?php echo $id + 1;?>], 'click' );
 	<?php
 	}
 	?>
