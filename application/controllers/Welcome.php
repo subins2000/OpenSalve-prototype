@@ -33,26 +33,33 @@ class Welcome extends CI_Controller {
 
 	public function getjson() {
 
+		$this->load->model('camps');
+		$camps = $this->camps->get_all();
+
   $mydata = "";
-  $len = 35;
+  $camps = (array) $camps;
+
+  $len = sizeof($camps);
   for($i=0 ; $i<$len ; $i++)
   {
+  	$camps[$i] = (array) $camps[$i];
 	  $mydata .= '
 	    {
 	      "type": "Feature",
 	      "properties": {
-	        "id": "ak169'.rand(10,1000).'",
+	        "id": "'.$camps[$i]['id'].'",
 	        "mag": 3.1,
 	        "time": 1507425650893,
 	        "felt": null,
-	        "description": "<strong>Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
+	        "title": "'.$camps[$i]['title'].'",
+	        "description": "<section class=\"mappopbox\"><p>is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p><p>Affected people: '.$camps[$i]['people'].'</p><p><a href=\"/camps/'.$camps[$i]['tag'].'\" target=\"_blank\" title=\"Opens in a new window\" class=\"btn btn-info my-2 my-sm-0\">Information</a><p></section>",
              "icon": "theatre"
 	      },
 	      "geometry": {
 	        "type": "Point",
 	        "coordinates": [
-	          76.'.rand(100,10000).',
-	          9.'.rand(100,10000).'
+	          '.$camps[$i]['lng'].',
+	          '.$camps[$i]['lat'].'
 	        ]
 	      }
 	    }';

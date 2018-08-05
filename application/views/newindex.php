@@ -57,7 +57,7 @@ map.on('load', function() {
                 ["linear"],
                 ["zoom"],
                 0, 1,
-                9, 3
+                12, 6
             ],
             // Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
             // Begin color ramp at 0-stop with a 0-transparancy color
@@ -79,7 +79,7 @@ map.on('load', function() {
                 ["linear"],
                 ["zoom"],
                 0, 2,
-                9, 20
+                15, 30
             ],
             // Transition from heatmap to circle layer by zoom level
             "heatmap-opacity": [
@@ -142,5 +142,25 @@ map.on('load', function() {
             ]
         }
     }, 'waterway-label');
+
+
+    map.on('click', function(e) {
+      var features = map.queryRenderedFeatures(e.point, {
+        layers: ['earthquakes-point'] // replace this with the name of the layer
+      });
+
+      if (!features.length) {
+        return;
+      }
+
+      var feature = features[0];
+
+      var popup = new mapboxgl.Popup({ offset: [0, -15] })
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML('<h3>' + feature.properties.title + '</h3><p>'
+         + feature.properties.description + '</p>')
+        .setLngLat(feature.geometry.coordinates)
+        .addTo(map);
+    });
 });
 </script>
