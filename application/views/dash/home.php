@@ -1,5 +1,5 @@
 <div class="card-title">
-    <h3>Admin Panel</h3>
+    <h3>Overview</h3>
     <h5></h5>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
@@ -11,12 +11,12 @@ var data = {
     datasets: [
         {
             label: "Required",
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            backgroundColor: 'rgba(255, 99, 132, 0.8)',
             data: [150,100,210]
         },
         {
             label: "Current",
-            backgroundColor: 'rgba(255, 206, 86, 0.2)',
+            backgroundColor: 'rgba(255, 206, 86, 0.8)',
             data: [50, 47, 87]
         },
     ]
