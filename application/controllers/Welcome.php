@@ -5,7 +5,7 @@ class Welcome extends CI_Controller {
 
 	public function __construct(){
         parent::__construct();
-        
+
       }
 
 	/**
@@ -74,5 +74,15 @@ class Welcome extends CI_Controller {
 
 
     echo']}';
+	}
+
+	public function camps() {
+		$this->load->model('camps');
+
+		$camps = $this->camps->get_all();
+
+		$this->load->view('parts/head');
+		$this->load->view('camps', ['camps' => $camps]);
+		$this->load->view('parts/foot');
 	}
 }

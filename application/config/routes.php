@@ -58,6 +58,8 @@ $route['register'] = 'register';
 $route['signin'] = 'register/login';
 $route['logout'] = 'register/logoutcontroller';
 
+$route['camps'] = 'welcome/camps';
+
 
 //dashboards
 $route['user'] = 'user/home';
@@ -66,3 +68,6 @@ $route['user/manage_camp'] = 'user/manage_camp';
 
 $route['supplies'] = 'supply/home';
 $route['supplies/add'] = 'supply/add_supply';
+
+$route['camp-manager'] = 'CampManager/home';
+$route['camp-manager/request'] = 'CampManager/request_supply';
