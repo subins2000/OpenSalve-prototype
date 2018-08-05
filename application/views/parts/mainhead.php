@@ -19,6 +19,16 @@
           top :10px;
           left :10px;
         }
+        #reqhelp {
+          position: fixed;
+          width:150px;
+          bottom :20px;
+          left :20px;
+          transition: all .2s ease-in-out;
+        }
+         #reqhelp:hover {
+          transform: scale(1.1);
+        }
 
         #reg {
           position: relative;
@@ -41,6 +51,9 @@
         }
         .mapboxgl-popup-content {
           color: #030303;
+        }
+        .mapboxgl-ctrl-bottom-left {
+          display: none;
         }
 
     </style>
