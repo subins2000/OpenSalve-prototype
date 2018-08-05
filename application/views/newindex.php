@@ -57,7 +57,7 @@ map.on('load', function() {
                 ["linear"],
                 ["zoom"],
                 0, 1,
-                9, 3
+                12, 6
             ],
             // Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
             // Begin color ramp at 0-stop with a 0-transparancy color
@@ -79,7 +79,7 @@ map.on('load', function() {
                 ["linear"],
                 ["zoom"],
                 0, 2,
-                9, 20
+                15, 30
             ],
             // Transition from heatmap to circle layer by zoom level
             "heatmap-opacity": [
@@ -144,30 +144,23 @@ map.on('load', function() {
     }, 'waterway-label');
 
 
-    map.addLayer({
-        "id": "places",
-        "type": "symbol",
-        "source": {
-            "type": "geojson",
-            "data": {
-                "type": "FeatureCollection",
-                "features": [{
-                    "type": "Feature",
-                    "properties": {
-                        "description": "<strong>Make it Mount Pleasant</strong><p><a href=\"http://www.mtpleasantdc.com/makeitmtpleasant\" target=\"_blank\" title=\"Opens in a new window\">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>",
-                        "icon": "theatre"
-                    },
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [76.387309, 9.481618]
-                    }
-                }]
-            }
-        },
-        "layout": {
-            "icon-image": "{icon}-15",
-            "icon-allow-overlap": true
-        }
+    map.on('click', function(e) {
+      var features = map.queryRenderedFeatures(e.point, {
+        layers: ['earthquakes-point'] // replace this with the name of the layer
+      });
+
+      if (!features.length) {
+        return;
+      }
+
+      var feature = features[0];
+
+      var popup = new mapboxgl.Popup({ offset: [0, -15] })
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML('<h3>' + feature.properties.title + '</h3><p>'
+         + feature.properties.description + '</p>')
+        .setLngLat(feature.geometry.coordinates)
+        .addTo(map);
     });
 });
 </script>
