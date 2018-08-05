@@ -1,3 +1,5 @@
+<?php echo form_open('request'); ?>
+
 <div class="container">
     <div class="form-group">
         <label>Name</label>
@@ -40,6 +42,8 @@
         </div>
     </div>
 </div>
+
+<?php echo form_close(); ?>
 
 <script>
 map = new google.maps.Map(document.getElementById('map'), {
