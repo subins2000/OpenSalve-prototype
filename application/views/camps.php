@@ -30,25 +30,27 @@
         <canvas id="myChart" width="400" height="300"></canvas>
         <script>
 		var requiredData = [150,100,210];
+		var currentData = [50, 47, 87];
+
         var ctx = document.getElementById("myChart").getContext('2d');
         var data = {
             labels: ["Water Bottles", "Rice", "Eggs"],
             datasets: [
                 {
                     label: "Required",
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    backgroundColor: 'rgba(10, 200, 132, 0.6)',
                     data: requiredData
                 },
                 {
                     label: "Current",
-                    backgroundColor: 'rgba(255, 206, 86, 0.2)',
-                    data: [50, 47, 87]
+                    backgroundColor: 'rgba(255, 206, 86, 0.6)',
+                    data: currentData
                 },
             ]
         };
 
         var myBarChart = new Chart(ctx, {
-            type: 'bar',
+            type: 'pie',
             data: data,
             options: {
                 barValueSpacing: 40,
@@ -119,11 +121,19 @@ for (i = 0; i < locations.length; i++) {
 	});
 
 	google.maps.event.addListener(markers[i], 'click', (function(marker, i) {
-		 return function() {
-			 $('#campName').text(locations[i][4]);
-			 $('#peopleCount').text(locations[i][3]);
-			 $('#daysCount').text(Math.round(Math.random() * 100));
-		 }
+		return function() {
+			$('#campName').text(locations[i][4]);
+			$('#peopleCount').text(locations[i][3]);
+			$('#daysCount').text(Math.round(Math.random() * 100));
+
+			chart.data.datasets[0].data = [
+				Math.round(Math.random() * 100),
+				Math.round(Math.random() * 100),
+				Math.round(Math.random() * 100)
+			];
+		    chart.data.labels[5] = "Newly Added";
+		    chart.update();
+		}
 	})(markers[i], i));
 }
 
