@@ -94,4 +94,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('camps', $data);
 		$this->load->view('parts/foot');
 	}
+
+	public function request() {
+		$this->load->view('parts/head');
+		$this->load->view('request');
+		$this->load->view('parts/foot');
+	}
 }
