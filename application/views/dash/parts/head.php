@@ -89,7 +89,7 @@
                                   <li><a href="<?=base_url();?>supplies"><i class="fa fa-list"></i> Manage </a></li>
                               </ul>
                           </li>
-                          <li><a href="#"><i class="fa fa-heart"></i> Requests </a></li>
+                          <li><a href="<?=base_url();?>user/requests"><i class="fa fa-heart"></i> Requests </a></li>
                          <li>
                             <a href="<?=base_url();?>logout">
                                 <i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</span>
