@@ -4,7 +4,7 @@
 </div>
 
 <div class="form-group has-default has-feedback">
-        <script type="text/javascript"   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuWSldX-non0YF-dn35hbE4BcIQoqwDDk&libraries=visualization">
+        <script type="text/javascript"   src="https://maps.googleapis.com/maps/api/js?key=XXXXCHANGEDXXXX&libraries=visualization">
         </script>
         <div id="map" style="height: 400px;width: 100%;"></div>
 </div>

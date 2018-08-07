@@ -23,7 +23,7 @@
 <a href="/request"><img src="<?=asset_url();?>imgs/help.png" id="reqhelp"></a>
 
 <script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiZ2Vvbmdlb3JnZWsiLCJhIjoiY2prZm5yaWZ5MDluODNrczdrMHRhZHB5eCJ9.xdRyfEKi2zGVLEUHIiVgFA';
+mapboxgl.accessToken = 'XXXXCHANGEDXXXX';
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/dark-v9',
